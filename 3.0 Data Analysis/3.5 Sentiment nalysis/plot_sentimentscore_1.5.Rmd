@@ -1,0 +1,36 @@
+
+```{R}
+library(tidyverse)
+library(tidytext)
+library(knitr)
+sentimentscores<-read_csv("data/alltweet_sentimentscores_topic_states_1920.csv")
+
+sentimentscores_topic_month<-sentimentscores%>%
+  group_by(topic,month)%>%
+  summarise(joy=sum(joy),anger=sum(anger),anticipation=sum(anticipation),disgust=sum(disgust),fear=sum(fear),sadness=sum(sadness),surprise=sum(surprise),trust=sum(trust),negative=sum(negative),positive=sum(positive))
+
+write.csv(sentimentscores_topic_month,"data/groupbytopicmonth_sentimentscores_1920.csv",row.names=FALSE)
+
+sentimentscores_states_long<-sentimentscores_topic_month%>%
+  select(-positive,-negative)%>%
+  pivot_longer(joy:trust,
+               names_to = "sentiment",
+               values_to = "Score")
+
+library(ggplot2)
+ggplot(data=sentimentscores_states_long,aes(x=sentiment,y=Score))+geom_bar(aes(fill=sentiment),stat = "identity")+
+  theme(legend.position="bottom",axis.text.x=element_blank())+ylab("Scores")+
+  facet_wrap(~state,scales="free",ncol=6)
+
+```
+
+```{R}
+ggplot(sentimentscores_states_long,aes(x=month,y=Score,group=sentiment,color=sentiment))+
+  geom_line()+
+  geom_point()+
+  facet_wrap(~topic,scales="free",ncol=1)
+```
+
+```{R}
+
+```
