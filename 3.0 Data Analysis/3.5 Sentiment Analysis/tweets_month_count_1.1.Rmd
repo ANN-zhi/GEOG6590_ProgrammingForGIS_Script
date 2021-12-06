@@ -1,0 +1,60 @@
+---
+title: 'Tweets Analysis'
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+## Tweets Analysis
+
+**Month counts**: Show the counts of tweets in each month.
+
+```{r}
+library(tidyverse)
+library(tidytext)
+library(knitr)
+
+tweets_state_level_data<-read_csv("data/clean_2019-03_2021-02_bbox_state_level.csv")
+ ```
+
+These data include tweets and geolocation, bbox is filtered in state level:
+
+```{r}
+tweets_state_level_month<-tweets_state_level_data %>%
+  group_by(Month) %>%
+  summarise(count=n())
+
+kable(tweets_state_level_month)
+```
+
+
+**Histogram of counts in each month**: Using ggplot, create a the histogram showing the counts of these tweets in each month.
+```{r}
+ggplot(tweets_state_level_month,aes(Month,count)) +
+  geom_col() +
+	xlab("Month") +
+	ylab("Tweets Count")+
+  geom_bar(stat = "identity",width =0.40)+
+  geom_text(aes(label=count), hjust=1.25, color="black")
+```
+
+
+
+```{r}
+ggplot(tweets_state_level_month,aes(Month, count, fill=Month))+
+	geom_col(color="black") +
+	ggtitle("Number of Tweets per Month") +
+	scale_fill_discrete(name="Month",guide=guide_legend(reverse=TRUE)) +
+  geom_text(aes(label=count), hjust=1.25, color="white")+
+	theme(plot.title=element_text(color="white"), panel.background=element_rect(fill="grey10"), plot.background=element_rect(fill="grey10"),axis.title.x=element_text(color="white"),axis.title.y=element_text(color="white"),axis.text=element_text(color="white"),legend.title=element_text(color="white"), legend.text=element_text(color="white"), legend.background=element_rect(fill="grey10"))
+
+```
+
+**box plot**: 
+```{r}
+ggplot(tweets_state_level_data,aes(y=public_metrics.quote_count,x=Month)) + geom_boxplot() 
+```
+
+**box plot**: 
+```{r}
+
+```
