@@ -1,6 +1,6 @@
 #create an auth() function that will have the “Bearer Token” from the app we just created
 import os
-os.environ['TOKEN'] = 'AAAAAAAAAAAAAAAAAAAAAJtgVgEAAAAAPtAynyI2oywacLvsArIWn3Aof%2Bg%3DqMxIL4seiIqPfcjG2iYaMYe8DDfiCC7SFm0ykASnSSRfwxtMfG'
+os.environ['TOKEN'] = '**********************************************************************'
 # For saving access tokens and for file management when creating and adding to the dataset
 
 def auth():
