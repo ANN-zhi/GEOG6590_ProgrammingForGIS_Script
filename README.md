@@ -19,7 +19,8 @@ query_params = {'query': keyword,
                 'place.fields': 'full_name,id,country,country_code,geo,name,place_type',
                 'next_token': {}}
 ```
-
+- The **connect_to_endpoint()** function puts all of the URL, headers, and parameters together to connect to the endpoint.
+The function below will send the “GET” request and if everything is correct (response code 200), it will return the response in “JSON” format.
   
 ### 1.2 Method 2
 The [twarc package](https://github.com/DocNow/twarc)
