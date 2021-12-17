@@ -36,7 +36,8 @@ In this project, the command line looks like this:
     
 
 ## 2.0 Data Cleaning
-
+- The part one in Data Cleaning section is used for deleting the unqualified rows or columns, join the tables, etc.
+- The part two in Data Cleaning section is used for understanding the distribution and numeric counts of the dataset. More importantly, four thresholds based on state, county, zip-code, and census tract are set to filter the bounding box to get the tweets with more precise geoinformation.
   
     
     
