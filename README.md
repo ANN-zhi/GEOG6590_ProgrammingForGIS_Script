@@ -3,6 +3,8 @@ Fall, 2021
 
 ## 1.0 Tweet Scraper
 Two methods are used to scrape and dump Tweets using [Twitter API for Academic research](https://developer.twitter.com/en/products/twitter-api/academic-research), they could produce exactly the same results. Method 1 was written by me, while Method 2 calls the [twarc package](https://github.com/DocNow/twarc). Method 2 is recommended because it's more convenient and understandable. 
+## 1.1 Method 1
+The tweetScraper.ipynb is the main program, all the other py files are functions used in the tweetScraper program.
   
     
     
