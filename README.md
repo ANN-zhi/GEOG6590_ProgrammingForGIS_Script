@@ -23,7 +23,16 @@ query_params = {'query': keyword,
 The function below will send the “GET” request and if everything is correct (response code 200), it will return the response in “JSON” format.
   
 ### 1.2 Method 2
-The [twarc package](https://github.com/DocNow/twarc)
+The twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API, please refer to their page for more information [twarc package](https://github.com/DocNow/twarc).
+In this project, the xommand line looks like this:
+~~~
+!twarc2 search --archive --limit 500000 --start-time "2019-03-01" --end-time "2019-04-01" \
+--expansions "author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username" \
+--tweet-fields "id,text,author_id,context_annotations,public_metrics,conversation_id,created_at,geo" \
+--user-fields "created_at,id,location,name,public_metrics" \
+--place-fields "contained_within,country,country_code,full_name,geo,id,name,place_type" \
+"(obesity OR (gain weight) OR bmi OR diet)"
+~~~
     
 
 ## 2.0 Data Cleaning
