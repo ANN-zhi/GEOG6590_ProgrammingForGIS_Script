@@ -6,8 +6,8 @@ Two methods are used to scrape and dump Tweets using [Twitter API for Academic r
 Method 1 was written by me, while Method 2 calls the [twarc package](https://github.com/DocNow/twarc). Method 2 is recommended because it's more convenient and understandable: all the raw codes are encapsulated, and it's possible to finish all the work with only one line. 
 ### 1.1 Method 1
 The tweetScraper.ipynb is the main program, all the other py files are functions used in the tweetScraper program.  
--The **auth()** in auth_function.py saves the “Bearer Token” you use to assess Twitter API in an an “environment variable”. Since this Bearer Token is sensitive information, you should not be sharing it with anyone at all.
--The **create_url()** in create_url_function.py build the request for the endpoint we are going to use and the parameters we want to pass. You could adjust your params here based on the [API reference](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all):
+- The **auth()** in auth_function.py saves the “Bearer Token” you use to assess Twitter API in an an “environment variable”. Since this Bearer Token is sensitive information, you should not be sharing it with anyone at all.
+- The **create_url()** in create_url_function.py build the request for the endpoint we are going to use and the parameters we want to pass. You could adjust your params here based on the [API reference](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all):
 ```
 query_params = {'query': keyword,
                 'start_time': start_date,
