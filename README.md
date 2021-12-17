@@ -24,7 +24,7 @@ The function below will send the “GET” request and if everything is correct 
   
 ### 1.2 Method 2
 The twarc is a command line tool and Python library for collecting and archiving Twitter JSON data via the Twitter API, please refer to their page for more information [twarc package](https://github.com/DocNow/twarc).
-In this project, the xommand line looks like this:
+In this project, the command line looks like this:
 ~~~
 !twarc2 search --archive --limit 500000 --start-time "2019-03-01" --end-time "2019-04-01" \
 --expansions "author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username" \
