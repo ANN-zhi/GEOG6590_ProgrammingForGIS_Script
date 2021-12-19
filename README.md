@@ -44,8 +44,13 @@ In this project, the command line looks like this:
 ## 3.0 Data Analysis
 ### 3.1 AnalyzeLocalTime
 Please refer to another repository of mine-[iso1861-UTC-timestamp-transfer-to-local-time](https://github.com/ANN-zhi/iso1861-UTC-timestamp-transfer-to-local-time) for detailed information.
-  
-    
+### 3.2 WordCloud
+
+
     
 ### 3.3 Topic Moldeling  
 Topic Modeling nbviewr [interactive interface](https://nbviewer.org/github/ANN-zhi/GEOG6590_ProgrammingForGIS_Script/blob/main/3.0%20Data%20Analysis/pyLDAvis_5.html)
+
+### 3.4 CorrelationAnalysis
+
+### 3.5 SentimentAnalysis
