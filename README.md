@@ -49,7 +49,7 @@ This part is mainly based on the methods in WordCloud package in Python. I also 
 
     
 ### 3.3 Topic Moldeling  
-Topic Modeling nbviewr [interactive interface](https://nbviewer.org/github/ANN-zhi/GEOG6590_ProgrammingForGIS_Script/blob/main/3.0%20Data%20Analysis/pyLDAvis_5.html)
+Topic Modeling nbviewr [interactive interface](https://nbviewer.org/github/ANN-zhi/GEOG6590_ProgrammingForGIS_Script/blob/main/3.0%20Data%20Analysis/pyLDAvis_5.html).
 
 ### 3.4 CorrelationAnalysis
 Mainly based on the pandas package in Pyhton. Spearman correlation analysis is used because the data are not normally distributed.
